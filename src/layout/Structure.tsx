@@ -1,11 +1,12 @@
 import * as React from 'react';
 
-import { Button, Layout, PageHeader, Result } from 'antd';
+import { PageHeader, PageHeaderProps } from '@ant-design/pro-layout';
+
+import { Button, Layout, Result } from 'antd';
 import { Link, Route, Switch } from 'react-router-dom';
 import { Thunk, resolveOptionalThunk, resolveThunk } from 'ts-thunk';
 import { appendStringPath, searchChildrenWithType } from '../utils';
 
-import { PageHeaderProps } from 'antd/lib/page-header';
 import { RouteComponentProps } from 'react-router';
 
 export type StructureItemContent = Thunk<
