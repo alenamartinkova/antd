@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Link, match as Match, Route } from "react-router-dom";
-import { appendStringPath, searchChildrenWithType } from "../utils";
+import { Link, match as Match, Route } from 'react-router-dom';
+import { appendStringPath, searchChildrenWithType } from '../utils';
 
-import { Menu as AntdMenu } from "antd";
-import { FolderOutlined } from "@ant-design/icons";
-import { MenuTheme } from "antd/lib/menu/MenuContext";
+import { Menu as AntdMenu } from 'antd';
+import { FolderOutlined } from '@ant-design/icons';
+import { MenuTheme } from 'antd/lib/menu/MenuContext';
 
 export interface MenuItemProps extends React.Props<any> {
   icon?: React.ReactNode;
@@ -56,7 +56,7 @@ export class Menu extends React.Component<MenuProps> {
       if (subitems && subitems.length > 0) {
         return (
           <AntdMenu.SubMenu
-            key={"sub_" + resolvedPath}
+            key={'sub_' + resolvedPath}
             title={
               <span>
                 {item.props.icon || <FolderOutlined />}
@@ -82,18 +82,18 @@ export class Menu extends React.Component<MenuProps> {
       return [];
     }
     let res: string[] = [];
-    let buff = "/";
+    let buff = '/';
 
-    if (match.url === "/") {
-      res.push("/");
+    if (match.url === '/') {
+      res.push('/');
     } else {
       match.url
-        .split("/")
+        .split('/')
         .filter((x) => x)
         .forEach((name: string) => {
           buff += name;
-          res.push(buff + "/");
-          buff += "/";
+          res.push(buff + '/');
+          buff += '/';
         });
     }
     return res;
@@ -114,8 +114,8 @@ export class Menu extends React.Component<MenuProps> {
             subitem.key.toString()
           );
           if (resolvedPath === match.url) {
-            const parentPath = appendStringPath(item.key.toString(), "");
-            return ["sub_" + parentPath];
+            const parentPath = appendStringPath(item.key.toString(), '');
+            return ['sub_' + parentPath];
           }
         }
       }
@@ -141,11 +141,11 @@ export class Menu extends React.Component<MenuProps> {
               defaultOpenKeys={this.defaultOpenKeys(match)}
               {...this.props}
               style={{
-                overflow: "auto",
-                height: "calc(100vh - 64px)",
+                overflow: 'auto',
+                height: 'calc(100vh - 64px)',
               }}
             >
-              {this.renderItems(items, "/")}
+              {this.renderItems(items, '/')}
             </AntdMenu>
           );
         }}

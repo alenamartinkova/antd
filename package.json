@@ -9,7 +9,9 @@
     "test": "react-scripts-ts test --env=jsdom"
   },
   "dependencies": {
+    "@ant-design/compatible": "^5.1.2",
     "@ant-design/icons": "^4.2.2",
+    "@ant-design/pro-layout": "^7.17.9",
     "@types/jsonwebtoken": "^7.2.7",
     "@types/lodash": "^4.14.109",
     "@types/react-broadcast": "^0.6.0",
@@ -21,10 +23,10 @@
     "uuid": "^3.3.2"
   },
   "peerDependencies": {
-    "antd": "^4.7.3",
+    "antd": "^5.10.2",
     "i18next": "*",
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0",
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
     "react-i18next": "*",
     "webpanel-data": "^0.3.1"
   },
@@ -33,14 +35,14 @@
     "@types/lodash": "^4.14.109",
     "@types/node": "^10.3.2",
     "@types/prop-types": "^15.7.1",
-    "@types/react": "^16.9.55",
-    "@types/react-dom": "^16.9.9",
-    "@types/react-router-dom": "^5.1.6",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.14",
+    "@types/react-router-dom": "^5.3.3",
     "@types/uuid": "^3.4.4",
     "antd": "^5.10.1",
     "i18next": "^21.5.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.4.1",
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
     "react-i18next": "^11.14.2",
     "react-router-dom": "^5.1.2",
     "react-scripts-ts": "^2.16.0",

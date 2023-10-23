@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Button, Form, Popconfirm } from "antd";
+import { Button, Form, Popconfirm } from 'antd';
 
-import { FormInstance } from "antd/lib/form";
+import { FormInstance } from 'antd/lib/form';
 
 export interface ResourceFormButtonsProps {
   form: FormInstance<any>;

@@ -1,10 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Alert, Form } from "antd";
-import { FormInstance, FormProps } from "antd/lib/form/Form";
+import { Alert, Form } from 'antd';
+import { FormInstance, FormProps } from 'antd/lib/form/Form';
 
-import { Resource } from "webpanel-data";
-import { ValidateErrorEntity } from "rc-field-form/lib/interface";
+import { Resource } from 'webpanel-data';
+import { ValidateErrorEntity } from 'rc-field-form/lib/interface';
 
 export interface ResourceFormProps extends FormProps {
   formResource: Resource;
@@ -66,7 +66,7 @@ export const ResourceForm = (props: ResourceFormProps) => {
       {
         <Form
           key={`resource_form_${formResource.name}_${
-            formResource.data ? "loaded" : "loading"
+            formResource.data ? 'loaded' : 'loading'
           }`}
           onValuesChange={onValuesChange}
           onFinish={onFinish}

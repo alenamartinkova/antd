@@ -1,12 +1,12 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Button, Layout, PageHeader, Result } from "antd";
-import { Link, Route, Switch } from "react-router-dom";
-import { Thunk, resolveOptionalThunk, resolveThunk } from "ts-thunk";
-import { appendStringPath, searchChildrenWithType } from "../utils";
+import { Button, Layout, PageHeader, Result } from 'antd';
+import { Link, Route, Switch } from 'react-router-dom';
+import { Thunk, resolveOptionalThunk, resolveThunk } from 'ts-thunk';
+import { appendStringPath, searchChildrenWithType } from '../utils';
 
-import { PageHeaderProps } from "antd/lib/page-header";
-import { RouteComponentProps } from "react-router";
+import { PageHeaderProps } from 'antd/lib/page-header';
+import { RouteComponentProps } from 'react-router';
 
 export type StructureItemContent = Thunk<
   React.ReactNode,
@@ -40,7 +40,7 @@ export class StructureItem extends React.Component<StructureItemProps> {
     let _header = resolveOptionalThunk(header, rest);
     return (
       <div>
-        <div style={{ margin: "-30px 0px 0px" }}>
+        <div style={{ margin: '-30px 0px 0px' }}>
           <PageHeader
             title={rest.name}
             onBack={() => window.history.back()}
@@ -63,7 +63,7 @@ export class Structure extends React.Component<ContentProps, ContentState> {
   getRoutes(
     items: React.ReactElement<StructureItemProps>[],
     routes: JSX.Element[] | null = null,
-    parentPath: string = ""
+    parentPath: string = ''
   ): JSX.Element[] {
     routes = routes || [];
 
@@ -106,8 +106,8 @@ export class Structure extends React.Component<ContentProps, ContentState> {
     if (error !== null) {
       const _error = error;
       return (
-        <Layout.Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
-          <div style={{ padding: 24, background: "#fff", textAlign: "center" }}>
+        <Layout.Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
+          <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
             error {_error.message}
           </div>
         </Layout.Content>
@@ -132,7 +132,7 @@ export class Structure extends React.Component<ContentProps, ContentState> {
     const items = searchChildrenWithType(this.props.children, StructureItem);
 
     return (
-      <Layout.Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
+      <Layout.Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
         <Switch>
           {this.getRoutes(items)}
           {pageNotFound}
